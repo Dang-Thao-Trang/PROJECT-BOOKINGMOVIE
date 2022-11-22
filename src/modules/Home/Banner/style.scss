@@ -1,0 +1,119 @@
+ .banner {
+   padding-top: 80px;
+   background-color: #000;
+   overflow: hidden;
+   
+   img{
+     width: 100%;
+     height: 70vh;
+     z-index: 99;
+   }
+
+// video
+  .video {
+		.video-overlay {
+			position: fixed;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.6);
+			z-index: 100;
+		}
+		.video-modal {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+      width: 50vw;
+      height: 50vh;
+			transform: translate(-50%, -50%);
+			z-index: 100;
+
+			.model-close {
+				position: absolute;
+				top: -5%;
+        right: -5%;
+				button {
+          background-color: #630606;
+					color: #fff;
+          width: 40px;
+          height: 40px;
+					font-size: 20px;
+					border: none;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+
+  .banner-icon-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 100px;
+		background-color: transparent;
+		color: rgba(255, 255, 255, 0.5);
+		border: none;
+		opacity: 0;
+		transition: all 0.3s;
+		cursor: pointer;
+		&:hover {
+      color: #630606;
+		}
+	}
+	&:hover .banner-icon-play {
+		opacity: 1;
+	}
+
+   // css swipper
+   .swiper-button-next,
+   .swiper-button-prev {
+     color: #fff;
+     font-weight: 700;
+     opacity: 0.5;
+     &:hover {
+       opacity: 1;
+     }
+   }
+
+   .swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		background: rgba(255, 255, 255, 0.5);
+		opacity: 0.8;
+	}
+   .swiper-pagination-bullet-active{
+          background-color: #E6E5A3;
+          font-size: 30px
+   }
+  };
+
+
+  // reponsive
+  @media screen and (max-width: 992px) {
+   .banner{
+      .banner-icon-play {
+      font-size: 80px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .banner{
+      .banner-icon-play {
+        font-size: 70px;
+      }
+     }
+  }
+  @media screen and (max-width: 576px) {
+    .banner{
+      .banner-icon-play {
+        font-size: 60px;
+      }
+     }
+  }
+
+
+  
+
+  

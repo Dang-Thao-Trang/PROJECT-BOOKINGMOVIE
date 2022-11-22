@@ -1,0 +1,15 @@
+.signin{
+ .form_signin{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%) !important;
+     padding: 100px 100px 50px 100px ;
+     width: 600px;
+     background-color: rgba(0, 0, 0, 0.772);
+     z-index: 99;
+     margin: 100px 0;
+ }
+
+ color: chocolate;
+}

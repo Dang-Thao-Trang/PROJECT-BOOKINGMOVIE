@@ -1,0 +1,10 @@
+.header {
+  background-color: #000;
+  color: #fff;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo {
+  img: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fvi%2Fpng-bbrmi&psig=AOvVaw1fwSjW9j850aAxw3JrzFxm&ust=1668280749694000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJjSvZ3spvsCFQAAAAAdAAAAABAG");
+}/*# sourceMappingURL=Header.module.css.map */
