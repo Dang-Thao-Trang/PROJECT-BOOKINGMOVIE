@@ -1,0 +1,24 @@
+.movie{
+// background-color:#464E2E ;
+// background-color: rgb(10 32 52);
+   background-color: #06283D;
+   padding: 30px 200px;
+}
+
+@media screen and (max-width: 1200px) {
+   .movie{
+   padding: 30px 100px;
+   }
+}
+
+@media screen and (max-width: 920px) {
+   .movie{
+   padding: 30px 50px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .movie{
+   padding: 30px 0;
+   }
+}

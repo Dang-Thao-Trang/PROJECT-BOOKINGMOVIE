@@ -104,11 +104,11 @@ const Showing = () => {
                     variant="danger"
                     onClick={() => navigate(`/movie/${item.maPhim}`)}
                   >
-                    Chi Tiết
+                    Đặt vé
                   </Button>
                   <Button
                     className="play_trailer"
-                    variant="success"
+                    variant="info"
                     onClick={() => handleOpenModal(item.trailer)}
                   >
                     <AiOutlinePlayCircle />

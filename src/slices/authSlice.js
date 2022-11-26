@@ -4,7 +4,7 @@ import authAPI from "../services/authAPI";
 const initialState = {
   user: JSON.parse(localStorage.getItem("user") || null),
   loading: false,
-  erorr: null,
+  error: null,
 };
 
 export const signin = createAsyncThunk("auth/signin", async (values) => {
@@ -35,6 +35,9 @@ const authSlice = createSlice({
       localStorage.removeItem("user");
       return { ...state, user: null };
     },
+    clearError: (state, action) => {
+      return { ...state, error: null };
+    },
   },
   extraReducers: (buider) => {
     buider.addCase(signin.pending, (state, action) => {
@@ -44,11 +47,12 @@ const authSlice = createSlice({
       return { ...state, loading: false, user: action.payload };
     });
     buider.addCase(signin.rejected, (state, action) => {
-      return { ...state, loading: false, erorr: action.error.message };
+      return { ...state, loading: false, error: action.error.message };
     });
   },
 });
 
-export const { logout } = authSlice.actions;
+// xong export o day
+export const { logout, clearError } = authSlice.actions;
 
 export default authSlice.reducer;

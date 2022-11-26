@@ -13,11 +13,12 @@ import NotFound from "../components/NotFound/NotFound";
 import AddMovie from "../modules/AddMovie";
 // import Register from "../modules/Auth/Signin/Register";
 import Signup from "../modules/Auth/Signup";
+import Ticket from "../modules/Ticket";
 // trì hoãn việc tải component cho đến khi được gọi
 const Auth = lazy(() => import("../modules/Auth"));
 const Signin = lazy(() => import("../modules/Auth/Signin"));
 const Movie = lazy(() => import("../modules/Movie"));
-const Checkout = lazy(() => import("../modules/Checkout"));
+// const Checkout = lazy(() => import("../modules/Checkout"));
 const UserProjected = lazy(() => import("./UserProjected"));
 
 const router = createBrowserRouter([
@@ -34,10 +35,10 @@ const router = createBrowserRouter([
       { path: "/movie/:movieId", element: <Movie /> },
       // checkout (đặt vé)
       {
-        path: "/checkout/:checkoutId",
+        path: "/ticket/:ticketId",
         element: (
           <UserProjected>
-            <Checkout />
+            <Ticket />
           </UserProjected>
         ),
       },

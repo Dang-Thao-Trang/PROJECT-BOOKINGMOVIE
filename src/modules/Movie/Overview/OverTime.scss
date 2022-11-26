@@ -1,0 +1,186 @@
+.overview{
+    position: relative;
+    .background{
+        width: 100%;
+        height: 75vh;
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #848678c3;
+        }
+        .container-fluid{
+            padding: 100px 40px 50px 40px;
+        }
+        .ovw_container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .ovw_row{
+                display: grid;
+                grid-template-columns: 25% 55% 15%;
+                grid-column-gap: 20px;
+                .img_film{
+                    width:15vw;
+                    height:300px;
+                    img{
+                        margin-top: 30px;
+                        box-shadow: rgba(24, 22, 22, 0.45) 15px 5px 15px;
+                        border-radius: 15px;  
+                        width: 100%;  
+                    }
+                    .rating_in_mobile{
+                        display: none;
+                    }
+                }
+            .info_flim{
+                .now_showing,.coming_soon {
+                    background: rgba(255, 255, 255, 0.3);
+                    color: rgb(229, 236, 15);
+                    font-size: 18px;
+                    font-weight: 800;
+                    padding: 5px 15px;
+                    border-radius: 5px;
+                }
+                .title_movie{
+                    margin: 10px 0;
+                    font-size: 30px;
+                    letter-spacing: 2px;
+                    font-weight: 800;
+                    color: #F49D1A;
+                }
+                .premiere_date{
+                    color: #F0FF42;
+                    font-size: 16px;
+                    span{
+                        color: #54B435;
+                        font-weight: 500;
+                    }
+                }             
+                .des_movie{
+                    color: rgb(14, 18, 9);
+                    text-align: justify;
+                    font-size: 16px;
+                }                 
+                .buy_ticket{
+                    color: #F49D1A;
+                }
+            }
+
+            .rating_film {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex: 2;
+                align-items: right;
+                display: block;
+                .progress_film {
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                    .progress_percent {
+                        color: #eee;
+                        font-size: 25px;
+                        font-weight: 500;
+                      &:hover {
+                        color: rgb(168, 245, 73);
+                        font-size: 40px;
+                      }
+                    }
+                }
+                .rating-start{
+                    display: flex;
+                    font-size: 20px;
+                    color: #F0FF42;
+              }
+            }
+            }
+        }
+    }
+}
+// response
+@media screen and (max-width: 1200px) {
+    .overview{
+        .background{
+            .container-fluid{
+                padding: 80px 30px 50px 30px;  
+            }
+            .ovw_container{                         
+                .ovw_row {
+                    .info_flim{
+                        .title_movie{
+                            font-size: 20px;
+                            margin: 5px 0;
+                        }
+                        .premiere_date{
+                            margin-bottom: 5px;
+                        }
+                        .des_movie{
+                            font-size: 15px;
+                        }   
+                    }              
+                }          
+            }                       
+        } 
+        .ant-progress-inner{
+            width: 100px !important;
+            height: 100px !important;
+        }  
+        .ant-rate{
+            font-size: 15px !important;
+        }   
+    }  
+}
+
+@media screen and (max-width: 992px) {
+    .overview{
+        .background{
+            height: 85vh;
+            .container-fluid{
+                padding: 100px 30px 50px 30px;
+            }
+        }
+        .ant-progress-inner{
+            width: 80px !important;
+            height: 80px !important;
+        }  
+        .ant-rate{
+            font-size: 13px !important;
+        } 
+        
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .overview{
+        .background{
+            height: 90vh;
+            .ovw_container{                         
+                .ovw_row {
+                    grid-template-columns: 30% 65%;
+                    .img_film{
+                        width:20vw;
+                        height:400px;
+                        .rating_in_mobile{
+                            display: block;
+                        }
+                    }
+                   .rating_film{
+                       display: none;
+                   }                       
+                } 
+             } 
+         }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .overview{
+        .background>.ovw_container>.ovw_row>.info_flim>.des_movie{
+            font-size: 13px;
+        }   
+    }
+}

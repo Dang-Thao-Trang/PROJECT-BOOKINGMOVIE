@@ -1,0 +1,105 @@
+.showtime{
+    max-width: 60vw;
+    margin: 50px auto;
+    border: 1px solid rgba(65, 35, 35, 0.1);
+    background-color: #000;
+  .showtime_theater{  
+     .system_theater {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0;
+        .theater_logo{
+            width: 50px;
+            height: 50px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .theater_name {
+            color: rgb(10, 201, 211);
+            font-size: 18px;
+            margin-left: 10px;
+            p {
+                margin-bottom: 0;
+           }
+       }
+    }
+    
+     .showing_time {
+        height: 300px;
+        overflow-y: scroll;
+        .showing_complex {
+            padding: 20px 5px 5px 20px;
+            .showing_theater {
+                color: red;
+                font-size: 20px;
+            }
+            .showing_date {
+                button {
+                    margin: 0 20px 20px 0;
+                    padding: 5px 8px;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border: 1px solid #54B435;
+                    color: rgb(197, 234, 12);
+                    background-color: #6a6d6a;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                  &:hover{
+                    background-color: #54B435;
+  
+                  }
+                }
+            }      
+       }      
+     }      
+   }
+// thu vien antd
+    .ant-col {
+        line-height: 50px;
+        font-size: 16px;
+    }
+    .ant-tabs-nav {
+        width: 25%;
+    }
+    .ant-tabs-ink-bar {
+    background: rgb(231, 3, 3);
+    }
+}
+
+// responsive
+@media screen and (max-width: 1200px) {
+    .showtime{
+        max-width: 70vw
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .showtime{
+        .ant-tabs-nav {
+            width: 35%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .showtime{
+        max-width: 80vw;
+        .showtime_theater .showing_time .showing_complex .showing_date button {
+
+            font-size: 12px;                    
+        }           
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .showtime{
+        max-width: 95vw; 
+        
+          
+          
+    }
+}

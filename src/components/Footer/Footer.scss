@@ -14,16 +14,20 @@
             }
             .about{
                 padding-top: 20px;
-                a{
-                    font-size: 15px;
-                    margin: 40px 0 20px 80px;
-                    color: #A9AF7E;
-                    text-decoration: none;
-                    background-color: transparent;
-                    transition: all 0.5s;
-                }&:hover{
-                    color: #6D9886;
+                div{
+                    margin: 5px 0;
+                    a{
+                        font-size: 15px;
+                        margin: 40px 10px 20px 80px;
+                        color: #A9AF7E;
+                        text-decoration: none;
+                        background-color: transparent;
+                        transition: all 0.5s;
+                    }&:hover{
+                        color: #6D9886;
+                    }
                 }
+                
     
             }
     
@@ -33,11 +37,15 @@
                 grid-template-rows: repeat(2, 60px);
                  grid-gap: 15px;
                  padding: 30px 20px 0 20px;
-    
+                // display: block;
                 .logo_partner{
                     width: 50px;
                     height: 50px;
                     margin-left: 10px;
+                    transition: all 0.8;
+                    &:hover{
+                        transform: translateY(-10px);
+                    }  
                     
                     img{
                         border-radius: 50%; 
@@ -56,10 +64,15 @@
             text-align: center;
             padding: 20px 20px 0 20px;
             margin: auto;
+            // display: block;
             .logo_bank{
                 margin-top: 10px;
                 width: 120px;
                 height: 30px;
+                transition: all 0.5;
+                    &:hover{
+                        transform: translateY(-10px);
+                    }  
                 img{
                     width: 100%;
                 }
@@ -81,12 +94,19 @@
             }
         }
         .app{
+            color: #fff;
             text-align: right;
             display: flex;
             justify-content: end;
+            opacity: 0.6;
+            transition: all 0.5;
+            &:hover{
+                opacity: 1;
+            }
             h5{
                 line-height: 80px;
                 margin-right: 20px;
+                color: #fff;
             }
             
         }
@@ -115,7 +135,8 @@
                 }
             }
             .bank .logo_bank{
-                    width: 100px;              
+                    width: 100px;
+                                
             }
             h5{
                 margin-top: 20px;
@@ -129,17 +150,16 @@
     .footer{
         .top_footer{
             border-bottom: 1px solid #E6E5A3;
-            .partner {
-                grid-template-columns: repeat(6, 1fr);
-                border-bottom: 1px solid #A9AF7E;
-                padding-bottom: 15px;
-            }
-            .bank{
-                grid-template-columns: repeat(3, 1fr);
+            .partner,.bank,.title_parner,.title_bank {
+                // grid-template-columns: repeat(6, 1fr);
+                // border-bottom: 1px solid #A9AF7E;
+                // padding-bottom: 15px;
+                display: none;
             }
             h5{
                 margin-top: 40px ;
             }
+           
         } 
         .bottom_footer{
             font-size: 30px;
@@ -163,29 +183,32 @@
             a{
                     margin: 0 !important;
                     color: #6D9886;
+                    font-size: 14px !important;
             }
         }
         .top_footer{
-            .partner {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            .bank{
-                grid-template-columns: repeat(3, 1fr);
-                .logo_bank{
-                    width: 80px;
-                }
-            }
             h5{
                 font-size: 22px;
                 margin-top: 40px ;
             }
         } 
         .bottom_footer{
-            font-size: 20px;
+            font-size: 18px;
             .logo_app{
-                line-height: 30px !important;
+                display: none;
             }
         }
 
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .footer{
+        .top_footer>.about>a{
+            font-size: 12px !important;
+        }
+        .bottom_footer{   
+            font-size: 16px;
+        }
     }
 }

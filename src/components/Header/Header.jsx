@@ -105,13 +105,12 @@ const Header = () => {
                     <FaUserLock className="logo_sign" />
                     Đăng nhập
                   </Link>
-                </div>
-                <div className="signup">
                   <Link to="/signup">
                     <FaUserPlus className="logo_sign" />
                     Đăng ký
                   </Link>
                 </div>
+                {/* <div className="signup"></div> */}
               </Nav>
             )}
           </Navbar.Collapse>

@@ -1,15 +1,59 @@
 .signin{
  .form_signin{
      position: absolute;
+     z-index: 99;
      top: 50%;
      left: 50%;
      transform: translate(-50%,-50%) !important;
-     padding: 100px 100px 50px 100px ;
+     padding: 50px ;
+     margin:  50px auto;
      width: 600px;
      background-color: rgba(0, 0, 0, 0.772);
-     z-index: 99;
-     margin: 100px 0;
  }
-
  color: chocolate;
 }
+
+@media screen and (max-width: 992px) {
+    .signin{
+        .form_signin{
+            width: 500px;
+        } 
+    }
+ }
+
+ @media screen and (max-width: 576px) {
+    .signin{
+        padding: 30px ;
+        .form_signin{
+            width: 80vw !important;
+            padding: 30px;
+            .title_signin{
+                font-size: 18px;
+                margin-bottom: 30px !important;
+                padding: 5px;
+            } 
+            .input-group{
+                margin: 25px 0 !important;
+            }
+        }
+        .footer_form{
+            button{
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+            p{
+                font-size: 14px !important;
+            }
+        }
+         
+    }
+ }
+ 
+//  @media screen and (max-width: 576px) {
+//     .signin{
+//         .form_signin{
+//             width: 300px;
+//         }
+//     }
+//  }
+

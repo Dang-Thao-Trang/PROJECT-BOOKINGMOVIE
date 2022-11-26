@@ -1,11 +1,12 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, Navigate, useSearchParams } from "react-router-dom";
-import { signin } from "../../../slices/authSlice";
-import "./Signin.scss";
-// Navigate là componnet
+import { signin, clearError } from "../../../slices/authSlice";
 import { BsPersonFill } from "react-icons/bs";
 import { RiLockPasswordFill } from "react-icons/ri";
+import swal from "sweetalert";
+import "./Signin.scss";
 
 const Signin = () => {
   const dispatch = useDispatch();
@@ -22,13 +23,25 @@ const Signin = () => {
   const { errors } = formState;
 
   const onSubmit = (values) => {
-    // dispatch lấy dữ liệu đăng nhập xác thực của user
     dispatch(signin(values));
   };
-
+  useEffect(
+    (values) => {
+      if (error) {
+        dispatch(clearError(values));
+        swal("Đăng nhập thất bại", "Vui lòng kiểm tra tài khoản!'", "error");
+      } else if (user && !error) {
+        swal(
+          "Đăng nhập thành công",
+          "Chào mừng bạn bạn đã ghé thăm",
+          "success"
+        );
+      }
+    },
+    [user, error]
+  );
   if (user) {
     const redirectUrl = searchParams.get("redirectUrl");
-    // có thông tin user => đã đăng nhập => redirect về redirectUrl hoặc home
     return <Navigate to={redirectUrl || "/"} replace />;
   }
 
@@ -36,7 +49,7 @@ const Signin = () => {
     <div id="signin" className="signin">
       <div className="overlay-lognin"></div>
       <div className="form_signin">
-        <h3 className="title-signin bg-secondary text-center mb-5 py-3">
+        <h3 className="title_signin bg-secondary text-center mb-5 py-3">
           SIGN IN
         </h3>
 
@@ -53,7 +66,7 @@ const Signin = () => {
                 minLength: { value: 5, message: "Tài khoản từ 5-20 ký tự" },
                 maxLength: { value: 20, message: "Tài khoản từ 5-20 ký tự" },
               })}
-              className="form-control"
+              className="form-control input"
               placeholder="Tài khoản"
             />
             <div className="w-100 text-danger">
@@ -73,23 +86,25 @@ const Signin = () => {
                 minLength: { value: 5, message: "Mật khẩu từ 5-20 ký tự" },
                 maxLength: { value: 20, message: "Mật khẩu từ 5-20 ký tự" },
               })}
-              className="form-control"
-              placeholder="Tài khoản"
+              className="form-control input"
+              placeholder="Mật khẩu"
+              type="password"
+              input="password"
             />
             <div className="w-100 text-danger">
               {errors.matKhau && <span>{errors.matKhau.message}</span>}
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center footer_form">
             <button disabled={loading} className="btn btn-warning my-1">
               Đăng nhập
             </button>
             <h6>{error && <p className="text-white">{error}</p>}</h6>
             <div>
-              <h6 className="mt-1 fs-6">
+              <p className="mt-1 text-warning fs-6">
                 Bạn chưa có tài khoản? <Link to="/signup">Đăng Ký</Link>
-              </h6>
+              </p>
             </div>
           </div>
         </form>

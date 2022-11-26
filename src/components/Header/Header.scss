@@ -48,9 +48,13 @@
             color: wheat;
             text-decoration: none;
             font-size: 15px;
-        }
-        
-        
+            opacity: 0.8;
+            transition: all 0.5;
+            &:hover{
+                opacity: 1;
+                color: greenyellow;
+            }
+        }                 
     }
 }
 .on-scroll-header{
@@ -60,9 +64,13 @@
 }
 
 
-  // reponese
+  // responese
   @media screen and (max-width:992px) {
    .header{
+       .container{
+        padding: 0 10px;
+        margin: auto;
+       }
         .navbar{
             .navbar-brand img{
                 background-color: transparent;
@@ -72,8 +80,8 @@
                 margin-left: 20px;
                 
             } 
-            .nav-link{
-                font-size: 16px;
+            .nav-link{               
+                font-size: 14px;
             }       
         }
         .signedin {  
@@ -87,6 +95,16 @@
             }
 
         } 
+        .auth{
+            .logo_sign,.logo_sign{
+                padding: 2px;
+                font-size: 20px;
+                }
+            a{
+                font-size: 13px;
+            }         
+        }
+       
    }
   }
 
@@ -101,36 +119,33 @@
             border-bottom: 1px solid #3D0000;
         }
         .signedin{
-            display: flex;
-            #dropdown-basic{
-                display: none;
-            }
             .user{
                 text-align: center;
             }
             .btn-logout{
                 margin: 20px 20px;
                 display: block;
-            }
-            
+            }           
         } 
         .auth{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);            .logo_sign{
+            grid-template-columns: repeat(2, 1fr);
+            .logo_sign{
             margin: 10px 0;
+            font-size: 25px;
             }
            .signin,.signup{
                margin: 0 auto;
-           }
-            
-            
+               a{
+                font-size: 15px;
+            } 
+           }                    
         }     
     }  
   }
 
   @media screen and (max-width:576px) {
       .navbar .nav-link{
-        font-size: 14px;
-    }            
-      
+        font-size: 14px;      
+    }                 
   }

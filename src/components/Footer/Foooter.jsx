@@ -116,7 +116,7 @@ const Foooter = () => {
           </div>
         </Col>
         <Col lg={4} md={6}>
-          <h5>NGÂN HÀNG LIÊN KẾT</h5>
+          <h5 className="title_bank">NGÂN HÀNG LIÊN KẾT</h5>
 
           <div className="bank">
             <div className="logo_bank">
@@ -161,30 +161,30 @@ const Foooter = () => {
       </Row>
 
       <Row className="bottom_footer">
-        <Col xs={6} className="contact">
+        <Col sx={6} className="contact">
           <div className="logo_contact">
-            <a href="">
+            <a href="#">
               <AiOutlineFacebook />
             </a>
           </div>
           <div className="logo_contact">
-            <a href="">
+            <a href="#">
               <AiOutlineGooglePlus />
             </a>
           </div>
           <div className="logo_contact">
-            <a href="">
+            <a href="#">
               <AiOutlineInstagram />
             </a>
           </div>
           <div className="logo_contact">
-            <a href="">
+            <a href="#">
               <AiOutlineYoutube />
             </a>
           </div>
         </Col>
 
-        <Col xs={6} className="app">
+        <Col sx={6} className="app">
           <h5 className="logo_app">APP |</h5>
           <div className="app_logo me-3">
             <AiFillAndroid />
