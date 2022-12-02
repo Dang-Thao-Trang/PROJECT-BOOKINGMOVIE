@@ -14,6 +14,7 @@ import AddMovie from "../modules/AddMovie";
 // import Register from "../modules/Auth/Signin/Register";
 import Signup from "../modules/Auth/Signup";
 import Ticket from "../modules/Ticket";
+import UpdateAccount from "../modules/Auth/UpdateAccount/UpdateAccount";
 // trì hoãn việc tải component cho đến khi được gọi
 const Auth = lazy(() => import("../modules/Auth"));
 const Signin = lazy(() => import("../modules/Auth/Signin"));
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
             element: <Signin />,
           },
           { path: "/signup", element: <Signup /> },
+          { path: "/updateAccount", element: <UpdateAccount /> },
         ],
       },
     ],

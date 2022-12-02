@@ -76,7 +76,7 @@ const Header = () => {
               <Nav className="signedin">
                 <div className="user text-info pt-2">
                   <FaUserEdit />
-                  <span className="mx-2 ">{user.taiKhoan}</span>
+                  <Link to="/updateAccount" className="mx-2 ">{user.hoTen}</Link>
                   <div
                     onClick={onLogOut}
                     className="btn  btn-info fs-6 btn-logout"
