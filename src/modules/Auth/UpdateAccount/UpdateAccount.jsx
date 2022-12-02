@@ -1,22 +1,17 @@
-import { useEffect } from "react";
-
-
 import { useForm } from "react-hook-form";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import authAPI from '../../../services/authAPI';
-import swal from "sweetalert";
-import { clearError } from "../../../slices/authSlice";
 import './style.css'
 const UpdateAccount = () => {
-    const dispatch = useDispatch();
-    const { loading, user, error } = useSelector((state) => state.auth);
+
+    const { loading, user } = useSelector((state) => state.auth);
     const { register, handleSubmit, formState } = useForm({
         defaultValues: { taiKhoan: `${user.taiKhoan}`, matKhau: "", email: `${user.email}`, soDt: `${user.soDT}`, maLoaiNguoiDung: "KhachHang", hoTen: `${user.hoTen}` },
-        mode: "onTouched", // điều kiện kích hoạt validation, mặc định onSubmit
+        mode: "onTouched",
     });
 
     const onSubmit = (values) => {
-        // console.log(values);
+
         authAPI.updateUserClient(values);
 
         alert("Để kiểm tra xem đã cập nhật thành công vui lòng đăng nhập lại")
