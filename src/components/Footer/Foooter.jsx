@@ -9,10 +9,12 @@ import {
   AiOutlineInstagram,
   AiOutlineYoutube,
 } from "react-icons/ai";
-
+import ScrollToTop from "react-scroll-to-top";
 const Foooter = () => {
   return (
+
     <Container id="footer" className="footer">
+      <ScrollToTop smooth top="20" />
       <Row className="top_footer">
         <Col lg={3} md={12}>
           <h5>LIÊN HỆ</h5>

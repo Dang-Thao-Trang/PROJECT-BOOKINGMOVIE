@@ -1,0 +1,49 @@
+.ghe {
+    border: 3px solid yellow;
+    width: 45px;
+    height: 35px;
+    font-size: 12px;
+    border-radius: 5px;
+    /* margin: 3px;  */
+}
+
+
+.gheDangChon {
+    background-color: rgb(109, 238, 109) !important;
+    border: 3px solid rgb(109, 238, 109);
+    color: #000;
+
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+
+}
+
+.gheVip {
+    background-color: red;
+    border: 3px solid yellow !important;
+    color: #000;
+
+    cursor: pointer;
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+}
+
+/* .ticket{
+
+} */
+
+.gheDaDat {
+    border: 3px solid yellow !important;
+
+    background-color: gray !important;
+    color: #000;
+    /* 
+     cursor: no-drop !important; */
+    border-radius: 5px;
+    width: 45px;
+    height: 35px;
+    pointer-events: none;
+}

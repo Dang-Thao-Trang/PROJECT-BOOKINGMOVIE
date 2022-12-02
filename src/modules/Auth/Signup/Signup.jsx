@@ -26,7 +26,6 @@ const Register = () => {
   const onSubmit = async (values) => {
     // dispatch lấy dữ liệu đăng nhập xác thực của user
     const data = await dispatch(signupAction(values));
-    console.log(data);
 
     if (data.type === "auth/signup/fulfilled") {
       alert("success");
@@ -40,9 +39,9 @@ const Register = () => {
     (values) => {
       if (error) {
         dispatch(clearError(values));
-        swal("Dang ky thất bại", "Vui lòng kiểm tra tài khoản!'", "error");
+        swal("Đăng ký thất bại", "Vui lòng kiểm tra tài khoản!'", "error");
       } else if (user && !error) {
-        swal("Dang ky thành công", "success");
+        swal("Đăng ký thành công", "success");
       }
     },
     [user, error]
@@ -161,6 +160,7 @@ const Register = () => {
               })}
               className="form-control"
               placeholder="Mật khẩu"
+              type="password"
             />
             <div className="w-100 text-danger">
               {errors?.matKhau && <span>{errors?.matKhau?.message}</span>}

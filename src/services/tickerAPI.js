@@ -16,6 +16,17 @@ const tickerAPI = {
       },
     });
   },
+  getDanhSachPhongVe: (maLichChieu) => {
+    return fetcher.get("QuanLyDatVe/LayDanhSachPhongVe", {
+      params: {
+        MaLichChieu: maLichChieu,
+      }
+    })
+  },
+
+  datVe: (thongTinVe) => {
+    return fetcher.post("QuanLyDatVe/DatVe", thongTinVe)
+  }
 };
 
 export default tickerAPI;

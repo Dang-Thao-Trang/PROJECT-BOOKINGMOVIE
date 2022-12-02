@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.show {
+    margin: 100px 0;
+}
+
+.ticket {
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    margin: 3px;
+}
+
+.ghe {
+    background-color: gray;
+}
+
+.gheVip {
+    background-color: yellow;
+}
+
+.gheDaDat {
+    background-color: black;
+}
+
+.gheDangChon {
+    background-color: green;
+}
+
+.screen {
+    border-bottom: 50px solid rgb(255, 159, 95);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 100;
+    width: 80%;
+    filter: drop-shadow(4px 30px 20px rgba(255, 255, 255, 0.5));
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    color: peru;
+    font-family: initial;
+    margin-bottom: 15px;
+}
+
+.danhSachGhe {
+    text-align: center;
+}

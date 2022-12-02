@@ -31,7 +31,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header">
+    <div className="header" style={{ top: 0 }}>
       <Navbar
         variant="dark"
         expand="md"
@@ -46,7 +46,7 @@ const Header = () => {
         }}
       >
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png"
               alt=""
@@ -67,10 +67,10 @@ const Header = () => {
           </Navbar.Toggle>
           <Navbar.Collapse id="navbars">
             <Nav className="mx-auto gap-3 menue">
-              <Nav.Link href="#home">Lịch chiếu</Nav.Link>
-              <Nav.Link href="#pricing">Đặt vé</Nav.Link>
-              <Nav.Link href="#features">Cụm rạp</Nav.Link>
-              <Nav.Link href="#pricing">Thông tin</Nav.Link>
+              <Nav.Link href="#cinemax">Lịch chiếu</Nav.Link>
+              <Nav.Link href="#showing">Đặt vé</Nav.Link>
+              <Nav.Link href="#footer ">Cụm rạp</Nav.Link>
+              <Nav.Link href="#footer">Thông tin</Nav.Link>
             </Nav>
             {user ? (
               <Nav className="signedin">

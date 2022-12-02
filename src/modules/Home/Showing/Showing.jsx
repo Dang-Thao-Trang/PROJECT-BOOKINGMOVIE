@@ -45,7 +45,7 @@ const Showing = () => {
   };
 
   return (
-    <div id="showing" className="showing">
+    <div id="showing" className="showing mt-2">
       <Swiper
         breakpoints={{
           0: {

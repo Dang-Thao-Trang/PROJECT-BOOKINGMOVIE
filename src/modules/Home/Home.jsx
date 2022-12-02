@@ -1,5 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
+
+import MovieBox from "./MovieBox/MovieBox";
 import Showing from "./Showing";
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
       <Banner />
 
       <Showing />
+
+      <MovieBox />
     </div>
   );
 };
