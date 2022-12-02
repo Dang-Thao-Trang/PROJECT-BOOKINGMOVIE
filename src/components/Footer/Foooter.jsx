@@ -39,7 +39,7 @@ const Foooter = () => {
             <div className="logo_partner">
               <a href="https://www.cgv.vn/">
                 <img
-                  src="https:static-s.aa-cdn.net/img/gp/20600005285939/9N7f8PWb1zlDqOR4mepkNFkRt5SlrjFoLsg5jYtVhvq9LeQneLKyHg9eEx4BSgyl7F4=w300?v=1"
+                  src="https://gigamall.com.vn/data/2019/05/06/11365490_logo-cgv-500x500.jpg"
                   alt="logo-cgv"
                 />
               </a>
@@ -86,7 +86,7 @@ const Foooter = () => {
             </div>
             <div className="logo_partner">
               <a href="http://ddcinema.vn/">
-                <img src="http://ddcinema.vn/Content/Img/logo.png" alt="" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV_-h4lSsGhZlH--ba424W1ZebOeCt5ARRrA&usqp=CAU" alt="ddc-cinema" />
               </a>
             </div>
             <div className="logo_partner">
